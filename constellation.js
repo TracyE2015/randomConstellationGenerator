@@ -10,7 +10,21 @@ let arrFact = ['Constellations are simply star patterns in the sky.',
 /* Object data structure for displaying facts */
 const displayConstellationFacts = (arr) => {
     let arrNumber = Math.floor(Math.random() * arrFact.length);
-    return arrFact[arrNumber];
-};               
+    
+    switch (arrNumber) {
+        case 0:
+            console.log(arrFact[0]);
+            break;
+        case 1:
+            console.log(arrFact[1]);
+            break;
+        case 2:
+            console.log(arrFact[2]);
+            break;
+        default:
+            console.log("Error displaying message.");
+            break;
+    }
+};              
 
-console.log(displayConstellationFacts(arrFact));
+displayConstellationFacts(arrFact);
